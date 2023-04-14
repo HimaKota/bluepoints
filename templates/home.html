@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div>
+  {% if user.is_authenticated %}
+    <h3 class="bp_name">Welcome {{ user.username }}</h3>
+  {% endif %}
+  {% for result in results %}  
+  <h1>{{result.EMAIL_ID}}</h1>  
+  {% empty %}
+    {% include '401.html' %}
+  {% endfor %}  
+</div>
+{% endblock %}

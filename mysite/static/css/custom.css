@@ -1,0 +1,21 @@
+span.circle {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  padding: 5px;
+  border: 3px solid #9d9d9d;
+  color: #9d9d9d;
+  text-align: center;
+}
+h3.bp_name {
+  text-align: center;
+  font-size: 36px;
+  color: darkcyan;
+}
+.modal-content {
+  width: 50%;
+  margin-left: 25%;
+}
+.modal-header {
+  color: red;
+}

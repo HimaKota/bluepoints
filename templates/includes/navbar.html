@@ -1,0 +1,55 @@
+{% load static %}
+<body>
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/">
+					Blue Points</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="/">Home</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle"
+                        data-toggle="dropdown" href="#">
+                        Appreciation<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Send Appreciation</a></li>
+                        <li><a href="#">Appreciation Activity</a></li>
+                        <li><a href="#">Budget History</a></li>
+                    </ul>
+                </li>
+				<li><a href="#">Celebrations</a></li>
+				<li><a href="#">Quarterly Cash Awards</a></li>
+                <li><a href="#">Learn & Support</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle"
+                        data-toggle="dropdown" href="#">
+                        Redeem Blue Points<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Merchandise Marketplace</a></li>
+                        <li><a href="#">Experiences Marketplace</a></li>
+                    </ul>
+                </li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a>
+					<span class="circle">BP</span> 100
+					</a></li>
+					{% if user.id is None %}
+				<li><a href="accounts/google/login/?process=login">
+					<span class="glyphicon glyphicon-user"></span>
+					Login</a></li>
+					{% else %}
+					<li><a href="#">
+						<span class="glyphicon glyphicon-user"></span>
+						{{ user.username }}</a></li>
+					<li><a href="{% url 'logout' %}"> 
+							<span class="glyphicon glyphicon-log-out"></span>
+						</a></li>
+					{% endif %}
+					
+			</ul>
+		</div>
+	</nav>
+</body>
+
